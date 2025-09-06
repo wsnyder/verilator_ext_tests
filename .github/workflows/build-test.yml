@@ -81,7 +81,7 @@ jobs:
           export VERILATOR_ROOT=$GITHUB_WORKSPACE/submodules/verilator
           make test
 
-      - name: Breakpoint if tests failed  FIXME
+      - name: Breakpoint if tests failed  FIXME FIXME
         if: failure()
         uses: namespacelabs/breakpoint-action@v0
         with:
