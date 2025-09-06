@@ -87,7 +87,7 @@ jobs:
 
       - name: Test
         run: |
-          source vl_env/bin/activate
+          source vl_venv/bin/activate
           export VERILATOR_ROOT=$GITHUB_WORKSPACE/submodules/verilator
           make test
 
