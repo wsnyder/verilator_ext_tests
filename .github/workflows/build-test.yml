@@ -87,6 +87,7 @@ jobs:
         run: |
           pipx ensurepath
           source ~/.bashrc
+          which astsee
           export VERILATOR_ROOT=$GITHUB_WORKSPACE/submodules/verilator
           make test
 
