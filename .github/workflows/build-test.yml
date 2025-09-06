@@ -5,11 +5,12 @@
 # any use, without warranty, 2020 by Wilson Snyder.
 # SPDX-License-Identifier: CC0-1.0
 
-name: build
+name: build-test
 
 on:
   push:
   pull_request:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * 0'  # weekly
 
@@ -29,7 +30,7 @@ jobs:
       CCACHE_MAXSIZE: 4Gi
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: 'recursive'
 
