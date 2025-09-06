@@ -73,8 +73,8 @@ jobs:
           CI_BUILD_STAGE_NAME: test
         run: |
           ( cd submodules/verilator && bash ci/ci-install.bash )
-          false
-          # FIXME sudo pipx install submodules/astsee
+	  pipx ensurepath
+          pipx install submodules/astsee
 
       - name: Test
         run: |
