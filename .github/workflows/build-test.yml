@@ -17,6 +17,11 @@ on:
 permissions:
   contents: read
 
+defaults:
+  run:
+    shell: bash
+    working-directory: repo
+
 jobs:
   vlt:
     runs-on: ubuntu-24.04
