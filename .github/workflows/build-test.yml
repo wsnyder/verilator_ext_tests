@@ -81,7 +81,7 @@ jobs:
         run: |
           ( cd submodules/verilator && bash ci/ci-install.bash )
           python3 -m venv vl_venv
-          source vl_env/bin/activate
+          source vl_venv/bin/activate
           pip install distro
           pip install submodules/astsee
 
