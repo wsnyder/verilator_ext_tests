@@ -80,14 +80,14 @@ jobs:
           CI_BUILD_STAGE_NAME: test
         run: |
           ( cd submodules/verilator && bash ci/ci-install.bash )
-          pipx ensurepath
-          pipx install submodules/astsee
+          python3 -m venv vl_venv
+          source vl_env/bin/activate
+          pip install distro
+          pip install submodules/astsee
 
       - name: Test
         run: |
-          pipx ensurepath
-          source ~/.bashrc
-          which astsee
+          source vl_env/bin/activate
           export VERILATOR_ROOT=$GITHUB_WORKSPACE/submodules/verilator
           make test
 

@@ -17,8 +17,9 @@ if 'usage:' not in out:
     test.skip("No astsee command installed")
 
 out = test.run_capture("python -c 'import astsee' 2>&1", check=False)
-if 'NotFoundError:' in out:
-    test.skip("No astsee package file installed")
+print(out)
+#FIXME if 'NotFoundError:' in out:
+#FIXME    test.skip("No astsee package file installed")
 
 test.setenv(
     "VERILATOR_GDB", "gdb --return-child-result" +
