@@ -20,7 +20,6 @@ permissions:
 defaults:
   run:
     shell: bash
-    working-directory: repo
 
 jobs:
   vlt:
