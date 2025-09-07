@@ -30,33 +30,34 @@ Local Usage
 
 Make a verilator checkout
 
-```
-git checkout <this_repository_url>
-cd verilator_ext_tests
-git submodule init  # first time only
-git submodule update
-```
+.. code-block:: bash
+
+   git checkout <this_repository_url>
+   cd verilator_ext_tests
+   git submodule init  # first time only
+   git submodule update
 
 Run an individual test:
 
-```
-export VERILATOR_ROOT=location  # if your shell is bash
-setenv VERILATOR_ROOT location  # if your shell is csh
-t/t_a_hello.py
-```
+.. code-block:: bash
+
+   export VERILATOR_ROOT=location  # if your shell is bash
+   setenv VERILATOR_ROOT location  # if your shell is csh
+   t/t_a_hello.py
 
 Automatically run these tests as part of normal Verilator "make test"
 
-```
-export VERILATOR_TESTS_SITE=$VERILATOR_TESTS_SITE:$PWD  # if your shell is bash
-setenv VERILATOR_TESTS_SITE $VERILATOR_TESTS_SITE:$PWD  # if your shell is csh
-```
+.. code-block:: bash
+
+   export VERILATOR_TESTS_SITE=$VERILATOR_TESTS_SITE:$PWD  # if your shell is bash
+   setenv VERILATOR_TESTS_SITE $VERILATOR_TESTS_SITE:$PWD  # if your shell is csh
 
 Cleanup
 
-```
-make clean
-```
+.. code-block:: bash
+
+   make clean
+
 
 Adding additional tests
 =======================
