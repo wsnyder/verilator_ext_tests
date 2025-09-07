@@ -1,19 +1,32 @@
-[![Build Status](https://github.com/verilator/verilator_ext_tests/workflows/build/badge.svg)](https://github.com/verilator/verilator_ext_tests/actions?query=workflow%3Abuild)
+.. Copyright 2019-2025 by Wilson Snyder.
+.. SPDX-License-Identifier: LGPL-3.0-only OR Artistic-2.0
 
-# Purpose
+************************
+Verilator Extended Tests
+************************
+
+Purpose
+=======
 
 This project contains additional tests for Verilator. These are generally
 tests that run for a long time, and/or use source code from other projects.
 
 To file issues, etc, please see https://verilator.org/issues
 
-# CI Usage
+CI Usage
+========
 
 Typical usage is via running the standard verilator/verilator GitHub
 continuous-integration actions.  These tests will run automatically on
 every pull.
 
-# CI Usage
+Specifically, Verilator's .github/workflow YAML files request a checkout of
+a specific version tag of this package.  Having a version number means that
+changes to this package or submodules will not cause Verilator CI actions
+to break, as they will stay at the old version.
+
+Local Usage
+===========
 
 Make a verilator checkout
 
@@ -45,7 +58,8 @@ Cleanup
 make clean
 ```
 
-# Adding additional tests
+Adding additional tests
+=======================
 
 To add additional tests, add a `t/t_{name}.py` file.  See the Verilator
 internals documentation for instructions on the test file format.
@@ -59,7 +73,8 @@ To be accepted in this package, an external submodule tested here must:
 * Be willing to consider patches as needed (i.e. not a "dead project").
 * Already run CI against a fixed version of Verilator
 
-# License
+License
+=======
 
 Tests and submodules under this package may have different licenses, please
 see the appropriate submodules.  As to this package itself it is under the
