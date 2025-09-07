@@ -5,13 +5,21 @@
 This project contains additional tests for Verilator. These are generally
 tests that run for a long time, and/or use source code from other projects.
 
-To file issues, etc, please see https://verilator.org.
+To file issues, etc, please see https://verilator.org/issues
 
-# Usage
+# CI Usage
 
-Initial prep
+Typical usage is via running the standard verilator/verilator GitHub
+continuous-integration actions.  These tests will run automatically on
+every pull.
+
+# CI Usage
+
+Make a verilator checkout
 
 ```
+git checkout <this_repository_url>
+cd verilator_ext_tests
 git submodule init  # first time only
 git submodule update
 ```
@@ -57,7 +65,7 @@ Tests and submodules under this package may have different licenses, please
 see the appropriate submodules.  As to this package itself it is under the
 same license as Verilator:
 
-Copyright 2019-2023 by Wilson Snyder.  This program is free software; you
+Copyright 2019-2025 by Wilson Snyder.  This program is free software; you
 can redistribute it and/or modify it under the terms of either the GNU
 Lesser General Public License Version 3 or the Perl Artistic License
 Version 2.0.
